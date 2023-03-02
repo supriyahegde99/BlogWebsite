@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/header.ejs %>
+</head>
+<h1>Home</h1>
+<body>
+    <p><%= homContent %></p>
+    <!-- <% console.log(posts) %> -->
+   <!-- <%  for(var i=0;i<posts.length;i++){ %>
+   <%  console.log(posts[i].title);  %> 
+    <% } %> -->
+<!-- 
+   <% posts.forEach(function(post){ %>
+         <% console.log(post.title); %>
+  <%  }); %> -->
+
+
+<% posts.forEach(function(post){ %>
+
+    <h1> <%= post.title %> </h1>
+    <p><%= post.postmsg.substring(0,100)+"..." %></p>
+    <a href="/posts/<%= post.title %>">Read More</a>
+
+  <%  }); %>
+
+</body>
+<footer>
+    <% include partials/footer.ejs %>
+</footer>
+</html>
+
+
+
+
